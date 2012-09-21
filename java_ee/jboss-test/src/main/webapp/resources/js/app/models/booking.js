@@ -1,0 +1,19 @@
+/**
+ * Module for the Booking model
+ */
+define([
+    // Configuration is a dependency
+    'configuration'
+], function (config) {
+
+    /**
+     * The Booking model class definition
+     * Used for CRUD operations against individual bookings
+     */
+    var Booking = Backbone.Model.extend({
+        urlRoot: config.baseUrl + 'rest/bookings'
+    });
+
+    return Booking;
+
+});
